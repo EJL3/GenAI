@@ -1,0 +1,15 @@
+# Cooking Assistant - Python Dependencies
+# Install with: pip install -r requirements.txt
+# Optimized for Pascal architecture GPUs (GTX 10-series, P100, etc.)
+
+# PyTorch 2.5.0 - Compatible with Pascal GPUs
+torch==2.5.0
+
+# Core libraries - updated transformers for Qwen2.5 support
+transformers>=4.40.0
+accelerate>=1.1.0
+sentencepiece>=0.2.0
+protobuf>=3.20.0
+bitsandbytes>=0.42.0
+
+# Note: 8-bit quantization reduces memory from 6GB (fp16) to ~3GB (int8)
