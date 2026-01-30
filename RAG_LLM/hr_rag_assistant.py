@@ -1,12 +1,11 @@
 import pandas as pd
 import os
 import warnings
-from typing import List, Dict
+from typing import List
 
 # --- MODERN IMPORTS (Hardware/Models) ---
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings, HuggingFacePipeline
-# These are now hosted in the classic package
 from langchain_classic.chains import RetrievalQA
 from langchain_classic.prompts import PromptTemplate
 from langchain_core.documents import Document 
@@ -130,9 +129,6 @@ def create_classic_rag_chain(vectorstore, llm):
     Creates a RAG chain using the 'langchain-classic' library 
     (RetrievalQA) which you successfully installed.
     """
-    # Import locally to ensure we use the classic versions
-    from langchain_classic.chains import RetrievalQA
-    from langchain_classic.prompts import PromptTemplate
 
     # 1. The Retriever
     retriever = vectorstore.as_retriever(search_kwargs={"k": 3})

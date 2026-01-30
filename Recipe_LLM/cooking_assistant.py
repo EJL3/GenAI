@@ -9,11 +9,8 @@ warnings.filterwarnings('ignore')
 # =============================================================================
 # CONFIGURATION
 # =============================================================================
-
-# Choose your model - smaller models work better on 6GB GPU with 8-bit:
-# MODEL_NAME = "Qwen/Qwen2.5-3B-Instruct"    # 3B - may OOM on GPU
-# MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.2"  # 7B - too large for 6GB
-MODEL_NAME = "Qwen/Qwen2-1.5B-Instruct"      # 1.5B - RECOMMENDED for 6GB GPU (stable & fast)
+# Model name from Hugging Face Model Hub
+MODEL_NAME = "Qwen/Qwen2-1.5B-Instruct"      
 
 # Force device - "cpu" or "cuda"
 FORCE_DEVICE = "cuda"  # Try GPU first with smaller model
